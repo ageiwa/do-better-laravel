@@ -8,7 +8,15 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <nav class="navbar"></nav>
+    <nav class="navbar">
+        <div class="container">
+            <img class="navbar__logo" src="/images/logo.jpg">
+            <div class="navbar__log-reg-container">
+                <a class="navbar__btn" href="#">Вход</a>
+                <a class="navbar__btn" href="#">Регистрация</a>
+            </div>
+        </div>
+    </nav>
     @yield('main')
 </body>
 </html>
