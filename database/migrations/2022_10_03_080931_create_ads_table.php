@@ -15,10 +15,20 @@ return new class extends Migration
     {
         Schema::create('ads', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_category')->constrained()->onDelete('cascade');
+            $table->foreignId('id_user')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->text('description');
             $table->string('category');
+            $table->string('status');
             $table->string('img_url');
+            $table->timestamps();
+        });
+
+        Schema::create('category', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('id_user')->constrained()->onDelete('cascade');
+            $table->string('title');
             $table->timestamps();
         });
     }
