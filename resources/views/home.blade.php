@@ -27,8 +27,8 @@
                 <img class="ads__img" src="{{ $ads->img_url }}">
                 <div class="ads__text">
                     <h2 class="ads__title"> {{ $ads->title }} </h2>
-                    <p class="ads__desc"> {{ $ads->description }} </p>
-                    <p class="ads__user"> {{ $ads->category->title }} </p>
+                    <p class="ads__user">Категория: {{ $ads->category->title }} </p>
+                    <p class="ads__user">Дата: {{ $ads->created_at }} </p>
                 </div>
             </div>
 
