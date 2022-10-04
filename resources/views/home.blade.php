@@ -19,4 +19,21 @@
         </div>
     </main>
 
+    <section class="ads-section">
+        <div class="container">
+        @foreach ($adss as $ads)
+
+            <div class="ads">
+                <img class="ads__img" src="{{ $ads->img_url }}">
+                <div class="ads__text">
+                    <h2 class="ads__title"> {{ $ads->title }} </h2>
+                    <p class="ads__desc"> {{ $ads->description }} </p>
+                    <p class="ads__user"> {{ $ads->category->title }} </p>
+                </div>
+            </div>
+
+        @endforeach
+        </div>
+    </section>
+
 @endsection

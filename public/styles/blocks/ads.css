@@ -1,0 +1,20 @@
+.ads-section {
+    padding: 10px;
+}
+
+.ads-section .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.ads {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.ads__img {
+    width: 100%;
+    height: auto;
+}

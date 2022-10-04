@@ -11,4 +11,4 @@ use App\Http\Controllers\AdsController;
 //     return 'Register';
 // });
 
-Route::get('/', [AdsController::class, 'index']);
+Route::get('/', [AdsController::class, 'index'])->name('index');
