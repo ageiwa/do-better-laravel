@@ -9,6 +9,6 @@ class AdsController extends Controller
 {
     public function index() {
         $context = ['adss' => Ads::latest()->get()];
-        return view('home', $context);
+        return view('index', $context);
     }
 }
