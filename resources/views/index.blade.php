@@ -8,8 +8,8 @@
         <div class="overlay">
             <div class="container">
                 <nav class="navbar">
-                    <a class="navbar__btn" href="#">Вход</a>
-                    <a class="navbar__btn" href="#">Регистрация</a>
+                    <a class="navbar__btn" href="{{ route('login') }}">Вход</a>
+                    <a class="navbar__btn" href="{{ route('register') }}">Регистрация</a>
                 </nav>
                 <div class="main__wrap">
                     <h1 class="main__title">Наш портал помогает содержать город в чистоте и порядке</h1>
