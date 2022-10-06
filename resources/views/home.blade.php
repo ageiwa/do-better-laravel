@@ -1,23 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+@section('title', 'Мои заявки')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@section('main')
+    <section class="ads-section">
+        <h1>Мои заявки</h1>
+        <div class="container">
+            @foreach ($adss as $ads)
 
-                    {{ __('You are logged in!') }}
+                <div class="ads">
+                    <img class="ads__img" src="{{ $ads->img_url }}">
+                    <div class="ads__text">
+                        <h2 class="ads__title"> {{ $ads->title }} </h2>
+                        <p class="ads__user">Категория: {{ $ads->category->title }} </p>
+                        <p class="ads__user">Дата: {{ $ads->created_at }} </p>
+                    </div>
                 </div>
-            </div>
+
+            @endforeach
         </div>
-    </div>
-</div>
+    </section>
 @endsection

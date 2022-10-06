@@ -8,15 +8,13 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    {{-- <nav class="navbar">
+    <nav class="navbar">
         <div class="container">
-            <img class="navbar__logo" src="/images/logo.jpg">
-            <div class="navbar__log-reg-container">
-                <a class="navbar__btn" href="#">Вход</a>
-                <a class="navbar__btn" href="#">Регистрация</a>
-            </div>
+            <a class="navbar__link" href="{{ route('index') }}">Главная</a>
+            <a class="navbar__link" href="{{ route('login') }}">Вход</a>
+            <a class="navbar__link" href="{{ route('register') }}">Регистрация</a>
         </div>
-    </nav> --}}
+    </nav>
     @yield('main')
 </body>
 </html>
