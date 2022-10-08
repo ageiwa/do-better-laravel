@@ -4,9 +4,10 @@
 
 @section('main')
     <section class="ads-section">
-        <h1>Мои заявки</h1>
+        <h1>Добро пожаловать {{ $username }}</h1>
         <div class="container">
-            @foreach ($adss as $ads)
+            <div class="ads-container">
+            @foreach ($adsList as $ads)
 
                 <div class="ads">
                     <img class="ads__img" src="{{ $ads->img_url }}">
@@ -18,6 +19,7 @@
                 </div>
 
             @endforeach
+            </div>
         </div>
     </section>
 @endsection

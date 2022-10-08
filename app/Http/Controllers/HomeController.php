@@ -24,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home', ['adss' => Auth::user()->ads()->latest()->get()]);
+        return view('home', [
+            'adsList' => Auth::user()->ads()->latest()->get(),
+            'username' => Auth::user()->name
+        ]);
     }
 }

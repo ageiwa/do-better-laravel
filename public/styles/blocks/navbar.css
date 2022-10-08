@@ -1,6 +1,6 @@
 .navbar {
-    border: 1px solid #000;
     width: 100%;
+    background-color: #23B44C;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -12,12 +12,16 @@
 }
 
 .navbar__link {
+    border: none;
     padding: 10px;
-    background-color: #23B44C;
+    height: 100%;
+    background-color: transparent;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
+    font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .navbar__link:hover {
