@@ -28,5 +28,6 @@
         </div>
     </nav>
     @yield('main')
+    <footer class="footer"></footer>
 </body>
 </html>

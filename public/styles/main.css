@@ -1,3 +1,6 @@
-@import url('./blocks/base.css');
-@import url('./blocks/navbar.css');
-@import url('./blocks/ads.css');
+@import url('./components/base.css');
+@import url('./components/navbar.css');
+@import url('./components/ads.css');
+@import url('./components/footer.css');
+
+@import url('./pages/index-page.css');

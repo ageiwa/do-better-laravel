@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
 .container {
     margin: 0 auto;
     width: 980px;

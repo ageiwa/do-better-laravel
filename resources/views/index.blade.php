@@ -5,6 +5,7 @@
 @section('main')
     <section class="ads-section">
         <div class="container">
+            <h1 class="ads-section__header">Последние решенные заявки</h1>
             <div class="ads-container">
             @foreach ($adsList as $ads)
 
