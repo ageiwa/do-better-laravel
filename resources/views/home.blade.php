@@ -4,8 +4,11 @@
 
 @section('main')
     <section class="ads-section">
-        <h1>Добро пожаловать {{ $username }}</h1>
         <div class="container">
+            <div class="control-panel">
+                <h1>Добро пожаловать {{ $username }}</h1>
+                <a class="control-panel__link-action">Создать заявку</a>
+            </div>
             <div class="ads-container">
             @foreach ($adsList as $ads)
 
