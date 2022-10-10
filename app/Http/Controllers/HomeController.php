@@ -29,4 +29,20 @@ class HomeController extends Controller
             'username' => Auth::user()->name
         ]);
     }
+
+    public function showAddAdsForm()
+    {
+        return view('ads__add');
+    }
+
+    public function storeBb(Request $request)
+    {
+        Auth::user()->ads()->create([
+            'title' => $request->title,
+            'content' => $request->content,
+            'price' => $request->price
+        ]);
+
+        return redirect()->route('home');
+    }
 }
