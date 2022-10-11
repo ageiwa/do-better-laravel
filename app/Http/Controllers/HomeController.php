@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -32,7 +33,9 @@ class HomeController extends Controller
 
     public function showAddAdsForm()
     {
-        return view('ads_add');
+        return view('ads_add', [
+            'categories' => Category::get()
+        ]);
     }
 
     public function storeBb(Request $request)

@@ -18,7 +18,11 @@
         <label for="slCategory">Выбор категории</label>
         <select name="category" class="input" id="slCategory">
             <option>Выберите категорию</option>
-            <option value="Дороги">Дороги</option>
+            
+            @foreach ($categories as $category)
+                <option>{{ $category->title }}</option>
+            @endforeach
+
         </select>
     </div>
     <input type="submit" class="form__btn" value="Добавить">
