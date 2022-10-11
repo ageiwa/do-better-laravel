@@ -32,7 +32,7 @@ class HomeController extends Controller
 
     public function showAddAdsForm()
     {
-        return view('ads__add');
+        return view('ads_add');
     }
 
     public function storeBb(Request $request)
