@@ -3,7 +3,7 @@
 @section('title', 'Добавление заявки')
 
 @section('main')
-<form>
+<form action="{{ route('ads.store') }}" method="POST">
     @csrf
 
     <div class="form__container">
@@ -20,7 +20,7 @@
             <option>Выберите категорию</option>
             
             @foreach ($categories as $category)
-                <option>{{ $category->title }}</option>
+                <option value="{{ $category->id }}">{{ $category->title }}</option>
             @endforeach
 
         </select>

@@ -9,7 +9,7 @@ use App\Models\Category;
 
 class Ads extends Model
 {
-    protected $fillable = ['title', 'description', 'img_url'];
+    protected $fillable = ['category_id', 'title', 'description', 'status', 'img_url'];
 
     public function user() {
         return $this->belongsTo(User::class);

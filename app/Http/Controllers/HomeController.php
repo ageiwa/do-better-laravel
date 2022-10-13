@@ -27,7 +27,8 @@ class HomeController extends Controller
     {
         return view('home', [
             'adsList' => Auth::user()->ads()->latest()->get(),
-            'username' => Auth::user()->name
+            'username' => Auth::user()->name,
+            'user_status' => Auth::user()->status
         ]);
     }
 
@@ -38,12 +39,14 @@ class HomeController extends Controller
         ]);
     }
 
-    public function storeBb(Request $request)
+    public function storeAds(Request $request)
     {
         Auth::user()->ads()->create([
+            'category_id' => $request->category,
             'title' => $request->title,
-            'content' => $request->content,
-            'price' => $request->price
+            'description' => $request->description,
+            'status' => 'Новая',
+            'img_url' => './ads-img/ads1.jpg',
         ]);
 
         return redirect()->route('home');

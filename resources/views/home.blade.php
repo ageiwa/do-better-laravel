@@ -7,7 +7,12 @@
         <div class="container">
             <div class="control-panel">
                 <h1>Добро пожаловать {{ $username }}</h1>
-                <a class="control-panel__link-action" href="{{ route('ads.add') }}">Создать заявку</a>
+                <div>
+                    @if ($user_status === 'admin')
+                        <a class="control-panel__link-action" href="{{ route('category.add') }}">Создать категорию</a>
+                    @endif
+                    <a class="control-panel__link-action" href="{{ route('ads.add') }}">Создать заявку</a>
+                </div>
             </div>
             <div class="ads-container">
             @foreach ($adsList as $ads)
