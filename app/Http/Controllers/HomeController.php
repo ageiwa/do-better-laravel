@@ -27,28 +27,18 @@ class HomeController extends Controller
     {
         return view('home', [
             'adsList' => Auth::user()->ads()->latest()->get(),
-            'username' => Auth::user()->name,
-            'user_status' => Auth::user()->status
-        ]);
-    }
-
-    public function showAddAdsForm()
-    {
-        return view('ads_add', [
-            'categories' => Category::get()
+            'user' => Auth::user()
         ]);
     }
 
     public function storeAds(Request $request)
     {
-        Auth::user()->ads()->create([
-            'category_id' => $request->category,
-            'title' => $request->title,
-            'description' => $request->description,
-            'status' => 'Новая',
-            'img_url' => './ads-img/ads1.jpg',
-        ]);
-
-        return redirect()->route('home');
+        // Auth::user()->ads()->create([
+        //     'category_id' => $request->category,
+        //     'title' => $request->title,
+        //     'description' => $request->description,
+        //     'status' => 'Новая',
+        //     'img_url' => './ads-img/ads1.jpg',
+        // ]);
     }
 }
