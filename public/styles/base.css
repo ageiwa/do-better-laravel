@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 900px;
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar .container {
+    display: flex;
+}
+
+.navbar__link {
+    padding: 10px;
+    color: #fff;
+    background-color: #4682b4;
+    text-decoration: none;
+}
