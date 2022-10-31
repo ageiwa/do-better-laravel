@@ -14,10 +14,13 @@
 
     <nav class="navbar">
         <div class="container">
-            <a class="navbar__link" href="#">Главная</a>
-            <a class="navbar__link" href="#">Вход</a>
-            <a class="navbar__link" href="#">Регистрация</a>
-            <a class="navbar__link" href="#">Выход</a>
+            <a class="navbar__link" href="{{ route('index') }}">Главная</a>
+            <a class="navbar__link" href="{{ route('login') }}">Вход</a>
+            <a class="navbar__link" href="{{ route('register') }}">Регистрация</a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <input class="navbar__link" type="submit" value="Выход">
+            </form>
         </div>
     </nav>
 
