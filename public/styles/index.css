@@ -29,6 +29,7 @@
 
 .post__link {
     margin: 10px;
+    margin-top: 0;
     border: 2px solid #000;
     padding: 10px;
     color: #fff;

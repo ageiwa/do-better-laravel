@@ -18,7 +18,7 @@
                         <p class="post__field">{{ $post->category->name }}</p>
                         <p class="post__field">{{ $post->date }}</p>
                     </div>
-                    <a class="post__link" href="#">Подробнее</a>
+                    <a class="post__link" href="{{ route('detail', ['post' => $post->id]) }}">Подробнее</a>
                 </div>
             @endforeach
 

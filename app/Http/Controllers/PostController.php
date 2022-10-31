@@ -11,5 +11,11 @@ class PostController extends Controller
         return view('index', [
             'posts' => $posts::get()
         ]);
-    } 
+    }
+
+    public function detail(Post $post) {
+        return view('detail', [
+            'post' => $post
+        ]);
+    }
 }
