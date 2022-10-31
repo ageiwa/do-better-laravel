@@ -15,7 +15,7 @@
                     <img class="post__img" src="{{ $post->img_url }}">
                     <div class="post__container">
                         <h2 class="post__field">{{ $post->name }}</h2>
-                        <p class="post__field">{{ $post->category_id }}</p>
+                        <p class="post__field">{{ $post->category->name }}</p>
                         <p class="post__field">{{ $post->date }}</p>
                     </div>
                     <a class="post__link" href="#">Подробнее</a>
