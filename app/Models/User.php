@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Ads;
-use App\Models\Category;
 
 class User extends Authenticatable
 {
@@ -43,12 +41,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function ads() {
-        return $this->hasMany(Ads::class);
-    }
-
-    public function category() {
-        return $this->hasMany(Category::class);
-    }
 }
