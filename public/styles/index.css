@@ -1,0 +1,44 @@
+.posts-list {
+    padding-top: 10px;
+    width: 100%;
+}
+
+.posts-list .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.post__posts-list {
+    border: 2px solid #000;
+    background-color: #d2b48c;
+    display: flex;
+    flex-direction: column;
+}
+
+.post__img {
+    width: 100%;
+}
+
+.post__container {
+    padding: 10px;
+}
+
+.post__field {
+    color: #fff;
+}
+
+.post__link {
+    margin: 10px;
+    border: 2px solid #000;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #008080;
+}
+
+.post__link:hover {
+    color: #000;
+    background-color: #fff;
+}
