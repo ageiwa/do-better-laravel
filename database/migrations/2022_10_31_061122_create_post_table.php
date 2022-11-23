@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('desc');
             $table->string('img_url');
             $table->string('status')->default('Новая');
-            $table->date('date');
+            $table->timestamps();
         });
     }
 
