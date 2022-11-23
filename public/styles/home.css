@@ -1,0 +1,23 @@
+.posts-list-user .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.post__posts-list-user {
+    border: 2px solid #000;
+    background-color: #d2b48c;
+    display: flex;
+    flex-direction: column;
+}
+
+.post__img {
+    width: 100%;
+}
+
+.post__container {
+    padding: 10px;
+}
+
+.post__field {
+    color: #fff;
+}

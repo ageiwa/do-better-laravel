@@ -1,23 +1,24 @@
 @extends('layouts.base')
 
+@section('styles')
+    <link rel="stylesheet" href="/styles/home.css">
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+    <section class="posts-list-user">
+        <div class="container">
+            
+            @foreach ($posts as $post)
+                <div class="post__posts-list-user">
+                    <img class="post__img" src="{{ $post->img_url }}">
+                    <div class="post__container">
+                        <h2 class="post__field">{{ $post->name }}</h2>
+                        <p class="post__field">{{ $post->category->name }}</p>
+                        <p class="post__field">{{ $post->date }}</p>
+                    </div>
                 </div>
-            </div>
+            @endforeach
+
         </div>
-    </div>
-</div>
+    </section>
 @endsection
