@@ -20,6 +20,7 @@
 .navbar .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .navbar__link {
@@ -38,4 +39,14 @@
 .navbar__link:hover {
     color: #000;
     background-color: #fff;
+}
+
+.navbar__group {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__username {
+    margin-right: 20px;
+    font-weight: 600;
 }
